@@ -22,6 +22,7 @@ class Pravokutnik{
 	public:
 		Pravokutnik();
 		Pravokutnik(float,float);
+		Pravokutnik(const Pravokutnik&);
 		~Pravokutnik();
 		float get_a();
 		float get_b();
@@ -32,17 +33,19 @@ class Pravokutnik{
 
 
 Pravokutnik::Pravokutnik(){
-	stranica_a = new float;
-	stranica_b = new float;
-	*stranica_a = 0;
-	*stranica_b = 0;
+	stranica_a = new float(0);
+	stranica_b = new float(0);
 }
 
 Pravokutnik::Pravokutnik(float a, float b){
-	stranica_a = new float;
-	stranica_b = new float;
-	*stranica_a = a;
-	*stranica_b = b;
+	stranica_a = new float(a);
+	stranica_b = new float(b);
+}
+
+Pravokutnik::Pravokutnik(const Pravokutnik &P){
+	stranica_a = new float(*(P.stranica_a));
+	stranica_b = new float(*(P.stranica_b));
+	
 }
 
 Pravokutnik::~Pravokutnik(){
@@ -74,7 +77,11 @@ int main(){
 	Pravokutnik p1;
 	cout << "a= " << p1.get_a() <<" b=" << p1.get_b() << endl;
 	Pravokutnik p2(14.3, 18.5);
+	
 	cout << "a= " << p2.get_a() <<" b=" << p2.get_b() << endl;
+	
+	Pravokutnik p3(p2); //provjera kopirnog konstruktora
+	cout << "a= " << p3.get_a() <<" b=" << p3.get_b() << endl;
 	p1.set(12.7, 9.2);
 	cout << "a= " << p1.get_a() <<" b="  << p1.get_b() << endl;
 	p1.ispis();
