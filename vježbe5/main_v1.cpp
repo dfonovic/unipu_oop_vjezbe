@@ -39,7 +39,7 @@ void Kvadrat::set(float a){
 
 
 void Kvadrat::ispis(){
-	cout << "Povrsina kvadrate je: " << *stranica << endl; 
+	cout << "Povrsina kvadrata je: " << (*stranica) * (*stranica) << endl; 
 }
 
 int main(){
