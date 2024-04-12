@@ -1,5 +1,18 @@
-#include<iostream>
 
+/*
+Zadatak:
+Definirajte klasu Kvadrat koja se sastoji od duljine stranice (pokazivac na float). Klasa treba sadržavati i slijedece elemente:
+
+Defaultni konstruktor koji dinamicki alocira memoriju za stranicu i postavlja vrijednosti atributa na 0
+Konstruktor sa argumentima koji dinamicki alocira memoriju za atribut i i postavlja vrijednost atributa na vrijednost argumenta funcije
+Kopirni konstruktor
+Destruktor koji alocira memoriju
+set i get funkciju
+funkciju print koja ispisuje vrijednost površine kvadrata na ekran
+U main funkciji treba demonstrirati rad svih elemenata klase.
+ */
+
+#include<iostream>
 using namespace std;
 
 class Kvadrat{
@@ -45,9 +58,9 @@ void Kvadrat::ispis(){
 int main(){
 	
 	Kvadrat k1;
-	cout << k1.get() << endl;
+	cout << "a=" << k1.get() << endl;
 	Kvadrat k2(14.3);
-	cout << k2.get() << endl;
+	cout << "a=" << k2.get() << endl;
 	k1.set(12.7);
 	cout << k1.get() << endl;
 	k1.ispis();

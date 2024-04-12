@@ -1,3 +1,17 @@
+/*
+Zadatak:
+Definirajte klasu Pravokutnik koja se sastoji od duljina stranica (pokazivaci na float). Klasa treba sadržavati i slijedece elemente:
+
+Defaultni konstruktor koji dinamicki alocira memoriju za stranice i postavlja vrijednosti atributa na 0
+Konstruktor sa argumentima koji dinamicki alocira memoriju za atribut i i postavlja vrijednost atributa na vrijednost argumenta funkcije
+Kopirni konstruktor
+Destruktor koji dealocira memoriju
+set i get funkciju
+funkciju print koja ispisuje vrijednost površine pravokutnika na ekran
+U main funkciji treba demonstrirati rad svih elemenata klase. 
+*/
+
+
 #include<iostream>
 
 using namespace std;
